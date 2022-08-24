@@ -1,14 +1,34 @@
 //
 // Created by Josean Camarena on 07/07/22.
-// Implemented by: $STUDENT$
+// Implemented by: Alberto Rentería
 //
 
 #include "pointers.h"
 
-int bubble_sort(int *target, int count)
+//Funcion swap para los algoritmos de ordenacion
+void swap(int *a, int *b)
 {
-  // aqui su implementación.
-  return 0;
+    int pivote = *a;
+    *a = *b;
+    *b = pivote;
+}
+
+int bubble_sort(int *collection, int count)
+{
+    int swap_count = 0;
+    for (int i = 0; i < count; i++)
+    {
+        for (int k = 0; k < (count - 1); k++)
+        {
+            if (*(collection+k) > *(collection+k+1))
+            {
+                swap((collection+k), (collection+k+1));
+                swap_count++;
+            }
+        }
+    }
+
+    return swap_count;
 }
 
 void insertion_sort(int *collection, int count)
