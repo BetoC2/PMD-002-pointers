@@ -60,5 +60,13 @@ void reverse(int *collection, int count)
 
 int calulate_frequency(int *collection, int count, int target)
 {
-  return 0;
+    int fqy_count = 0;
+    for (int i = 0; i < count; i++)
+    {
+        if (*(collection+i) == target)
+        {
+            fqy_count++;
+        }
+    }
+    return fqy_count;
 }
