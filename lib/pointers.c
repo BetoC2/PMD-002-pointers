@@ -49,6 +49,12 @@ void insertion_sort(int *collection, int count)
 
 void reverse(int *collection, int count)
 {
+    int prom = count/2;
+    int i, j;
+    for (i = 0, j = count - 1; i < prom; i++, j--)
+    {
+        swap(collection + i,collection + j);
+    }
 
 }
 
